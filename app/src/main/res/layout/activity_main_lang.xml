@@ -3,32 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/space"
     android:layout_height="match_parent"
+    android:background="@drawable/space"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/_gLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/_gLineHorizont"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53"/>
+        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/_textViev"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:background="@color/white"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toBottomOf="@id/_gLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/_gLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btm_7"
-        android:background="@color/white"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -38,8 +43,8 @@
         android:background="@color/white"
         android:hint="@string/_7"
         android:textSize="@dimen/button_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintStart_toStartOf="@id/_gLine"
+        app:layout_constraintTop_toTopOf="@+id/_gLineHorizont" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btm_8"
@@ -53,7 +58,7 @@
         android:hint="@string/_8"
         android:textSize="@dimen/button_text"
         app:layout_constraintStart_toEndOf="@+id/btm_7"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toTopOf="@+id/_gLineHorizont" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btm_9"
@@ -67,7 +72,7 @@
         android:hint="@string/_9"
         android:textSize="@dimen/button_text"
         app:layout_constraintStart_toEndOf="@+id/btm_8"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toTopOf="@+id/_gLineHorizont" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btm_4"
@@ -80,7 +85,7 @@
         android:background="@color/white"
         android:hint="@string/_4"
         android:textSize="@dimen/button_text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/_gLine"
         app:layout_constraintTop_toBottomOf="@id/btm_7" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -122,7 +127,7 @@
         android:background="@color/white"
         android:hint="@string/_1"
         android:textSize="@dimen/button_text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/_gLine"
         app:layout_constraintTop_toBottomOf="@id/btm_4" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -164,7 +169,7 @@
         android:background="@color/white"
         android:hint="@string/_0"
         android:textSize="@dimen/button_text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/_gLine"
         app:layout_constraintTop_toBottomOf="@id/btm_1" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -249,7 +254,7 @@
         android:hint="@string/_div"
         android:textSize="@dimen/button_text"
         app:layout_constraintStart_toEndOf="@id/btm_9"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toTopOf="@+id/_gLineHorizont" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
