@@ -3,253 +3,192 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/space"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/_gLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/_textViev"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:background="@color/white"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toBottomOf="@id/_gLine"
+        style="@style/MyThemeTextViewVertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_7"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_7"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_4"
+        app:layout_constraintEnd_toStartOf="@id/btm_8"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toBottomOf="@id/_textViev"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_8"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_5"
+        app:layout_constraintEnd_toStartOf="@id/btm_9"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/btm_7"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toBottomOf="@id/_textViev"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_9"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_6"
+        app:layout_constraintEnd_toStartOf="@id/btm_div"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/btm_8"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toBottomOf="@id/_textViev"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_4"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_1"
+        app:layout_constraintEnd_toStartOf="@id/btm_5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btm_7" />
+        app:layout_constraintTop_toBottomOf="@id/btm_7"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_5"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_2"
+        app:layout_constraintEnd_toStartOf="@id/btm_6"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_4"
-        app:layout_constraintTop_toBottomOf="@id/btm_8" />
+        app:layout_constraintTop_toBottomOf="@id/btm_8"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_6"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_3"
+        app:layout_constraintEnd_toStartOf="@id/btm_mul"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_5"
-        app:layout_constraintTop_toBottomOf="@id/btm_9" />
+        app:layout_constraintTop_toBottomOf="@id/btm_9"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_1"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_0"
+        app:layout_constraintEnd_toStartOf="@id/btm_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btm_4" />
+        app:layout_constraintTop_toBottomOf="@id/btm_4"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_2"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_clear"
+        app:layout_constraintEnd_toStartOf="@id/btm_3"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_1"
-        app:layout_constraintTop_toBottomOf="@id/btm_5" />
+        app:layout_constraintTop_toBottomOf="@id/btm_5"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_3"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_equality"
+        app:layout_constraintEnd_toStartOf="@id/btm_minus"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_2"
-        app:layout_constraintTop_toBottomOf="@id/btm_6" />
+        app:layout_constraintTop_toBottomOf="@id/btm_6"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_0"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btm_clear"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btm_1" />
+        app:layout_constraintTop_toBottomOf="@id/btm_1"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_clear"
-        android:textSize="@dimen/button_text"
+        android:textSize="@dimen/text_size2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btm_equality"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_0"
-        app:layout_constraintTop_toBottomOf="@id/btm_2" />
+        app:layout_constraintTop_toBottomOf="@id/btm_2"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_equality"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_equality"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btm_plus"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_clear"
-        app:layout_constraintTop_toBottomOf="@id/btm_3" />
+        app:layout_constraintTop_toBottomOf="@id/btm_3"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_plus"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_equality"
-        app:layout_constraintTop_toBottomOf="@id/btm_minus" />
+        app:layout_constraintTop_toBottomOf="@id/btm_minus"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_minus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_minus"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_3"
-        app:layout_constraintTop_toBottomOf="@id/btm_mul" />
+        app:layout_constraintTop_toBottomOf="@id/btm_mul"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_mul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_mul"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_6"
-        app:layout_constraintTop_toBottomOf="@id/btm_div" />
+        app:layout_constraintTop_toBottomOf="@id/btm_div"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btm_div"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        style="@style/MyThemeVertical"
         android:hint="@string/_div"
-        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toTopOf="@id/btm_mul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/btm_9"
-        app:layout_constraintTop_toTopOf="@id/_gLine" />
+        app:layout_constraintTop_toBottomOf="@id/_textViev"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_text">40sp</dimen>
-    <dimen name="text_size">50sp</dimen>
+    <dimen name="text_size">40sp</dimen>
+    <dimen name="text_size2">26sp</dimen>
+    <dimen name="layout_marginStart">8dp</dimen>
+    <dimen name="layout_marginEnd">8dp</dimen>
+    <dimen name="layout_marginTop">1dp</dimen>
+    <dimen name="layout_marginBottom">1dp</dimen>
+    <dimen name="vertical_size"></dimen>
+    <dimen name="horisontal_size">100dp</dimen>
+    <dimen name="TextViewSizeV">350dp</dimen>
+    <dimen name="TextViewSizeH">300dp</dimen>
+    <dimen name="marginTop_TextView">20dp</dimen>
 </resources>
