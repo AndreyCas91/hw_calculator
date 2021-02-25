@@ -11,11 +11,19 @@
         android:theme="@style/Theme.Hw_calculator">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:label="ru.geekbrains.hw_calculator.MainActivity">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="test"
+                    android:host="calculator" />
             </intent-filter>
         </activity>
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>
