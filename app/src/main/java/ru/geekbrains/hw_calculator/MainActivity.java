@@ -3,15 +3,21 @@ package ru.geekbrains.hw_calculator;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Calculator calculator = new Calculator();
+
     private String KEY_SAVE = "calculator";
 
     private String btm_1 = "1";
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String minus = "-";
     private String div = "/";
     private String mul = "*";
+    private String equality = "=";
 
     private String conclusion = "";
 
@@ -51,15 +58,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button15;
     private Button button16;
 
+    private TextView setting;
+
+    private static final String NAME = "NAME";
+    private static final String KEY = "key";
+
+//    private final static String TEXT = "PARAM";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Configuration configuration = getResources().getConfiguration();
-        if (configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.activity_main);
-        } else if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.activity_main_lang);
+        if (getSetting() == 0){
+            setTheme(R.style.Theme_Hw_calculator_one);
+        } else if (getSetting() == 1){
+            setTheme(R.style.Theme_Hw_calculator);
         }
+
+        setContentView(R.layout.activity_main);
 
         initView();
         initOnClickListener();
@@ -82,6 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button14.setOnClickListener(this);
         button15.setOnClickListener(this);
         button16.setOnClickListener(this);
+
+        setting.setOnClickListener(this);
     }
 
     private void initView() {
@@ -103,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button14 = findViewById(R.id.btm_mul);
         button15 = findViewById(R.id.btm_div);
         button16 = findViewById(R.id.btm_equality);
+
+        setting = findViewById(R.id.setting);
     }
 
     @Override
@@ -110,53 +129,74 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btm_1:
                 setTextView(btm_1);
+                calculator.calculate(btm_1);
                 break;
             case R.id.btm_2:
                 setTextView(btm_2);
+                calculator.calculate(btm_2);
                 break;
             case R.id.btm_3:
                 setTextView(btm_3);
+                calculator.calculate(btm_3);
                 break;
             case R.id.btm_4:
                 setTextView(btm_4);
+                calculator.calculate(btm_4);
                 break;
             case R.id.btm_5:
                 setTextView(btm_5);
+                calculator.calculate(btm_5);
                 break;
             case R.id.btm_6:
                 setTextView(btm_6);
+                calculator.calculate(btm_6);
                 break;
             case R.id.btm_7:
                 setTextView(btm_7);
+                calculator.calculate(btm_7);
                 break;
             case R.id.btm_8:
                 setTextView(btm_8);
+                calculator.calculate(btm_8);
                 break;
             case R.id.btm_9:
                 setTextView(btm_9);
+                calculator.calculate(btm_9);
                 break;
             case R.id.btm_0:
                 setTextView(btm_0);
+                calculator.calculate(btm_0);
                 break;
             case R.id.btm_clear:
                 conclusion = "";
                 setTextView(clear);
+                calculator.calculate(clear);
                 break;
             case R.id.btm_plus:
                 setTextView(plus);
+                calculator.calculate(plus);
                 break;
             case R.id.btm_minus:
                 setTextView(minus);
+                calculator.calculate(minus);
                 break;
             case R.id.btm_div:
                 setTextView(div);
+                calculator.calculate(div);
                 break;
             case R.id.btm_mul:
                 setTextView(mul);
+                calculator.calculate(mul);
                 break;
             case R.id.btm_equality:
-// Не прописал метод для знака "=", а то придется до конца калькулятор дописать. Переживаю что вперед забегу.
+                setTextView("\n" + equality + "\n");
+                calculator.calculate(equality);
+                setTextView(calculator.answer());
                 break;
+            case R.id.setting:
+                Intent intent = new Intent(MainActivity.this, Setting.class);
+                startActivity(intent);
+                finish();
         }
     }
 
@@ -181,4 +221,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         conclusion = (String) instanceState.getSerializable(KEY_SAVE);
         setTextView();
     }
+
+   private int getSetting() {
+        SharedPreferences sp = getSharedPreferences(NAME, MODE_PRIVATE);
+        return sp.getInt(KEY, -1);
+    }
+
+//    private void startIntent(){
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        if (bundle == null){
+//            return;
+//        }
+////        String text  = bundle.get(TEXT);
+//    }
 }
